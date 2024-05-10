@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
-	"log"
 	"net/url"
 	"strconv"
 )
@@ -136,8 +135,6 @@ func (c *Client) ListGrandExchangeItems(gameType string, itemAlpha string, itemC
 	if err != nil {
 		return nil, err
 	}
-
-	log.Printf("%v", response)
 
 	return &response, nil
 }
