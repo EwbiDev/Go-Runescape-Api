@@ -69,9 +69,12 @@ func (tp *TrendPrice) UnmarshalJSON(data []byte) error {
 //
 // itemAlpha specifies the first character of the item name to filter by.
 //
-// itemCategory specifies the category of items to retrieve.
+// itemCategory specifies the category of items to retrieve. Reference for the Item Category Ids can be found on the
+// [RuneScape Wiki]. itemCategory will default to 1 if gameType is set to "osrs"
 //
 // page specifies the page number of the results.
+//
+// [RuneScape Wiki]: https://runescape.wiki/w/Application_programming_interface#items
 func (c *Client) ListGrandExchangeItems(gameType string, itemAlpha string, itemCategory int64, page int64) (*GeResponse, error) {
 	validGameTypes := map[string]bool{
 		"rs3":  true,
