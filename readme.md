@@ -18,7 +18,7 @@ package main
 import (
 	"log"
 
-	"github.com/EwbiDev/go-runescape"
+	"github.com/EwbiDev/go-runescape/runescape"
 )
 
 func main() {
